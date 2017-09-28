@@ -1,0 +1,186 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.nf.springmvc</groupId>
+  <artifactId>springmvc</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>springmvc Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    
+    
+    <dependency>  
+        <groupId>org.springframework</groupId>  
+        <artifactId>spring-aop</artifactId>  
+        <version>${spring.version}</version>  
+        <type>jar</type>  
+        <scope>compile</scope>  
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-context</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-context-support</artifactId>
+        <version>${spring.version}</version>
+    </dependency>  
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-core</artifactId>
+        <version>${spring.version}</version>
+    </dependency>  
+    <dependency>  
+        <groupId>org.springframework</groupId>  
+        <artifactId>spring-expression</artifactId>  
+        <version>${spring.version}</version>  
+        <type>jar</type>  
+        <scope>compile</scope>  
+    </dependency>  
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-web</artifactId>
+        <version>${spring.version}</version>
+    </dependency>    
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-webmvc</artifactId>
+        <version>${spring.version}</version>
+    </dependency>    
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-aspects</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-orm</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-oxm</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-tx</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-jdbc</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-jms</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-beans</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-test</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
+    
+   <!-- dubbo依赖jar -->  
+        <dependency>  
+            <groupId>com.alibaba</groupId>  
+            <artifactId>dubbo</artifactId>  
+            <version>2.4.9</version>  
+            <exclusions>  
+                <exclusion>  
+                    <artifactId>spring</artifactId>  
+                    <groupId>org.springframework</groupId>  
+                </exclusion>  
+            </exclusions>  
+        </dependency>  
+  
+        <dependency>  
+            <groupId>org.apache.zookeeper</groupId>  
+            <artifactId>zookeeper</artifactId>  
+            <version>3.4.5</version>  
+            <exclusions>  
+                <exclusion>  
+                    <groupId>log4j</groupId>  
+                    <artifactId>log4j</artifactId>  
+                </exclusion>  
+            </exclusions>  
+        </dependency>  
+  
+        <dependency>  
+            <groupId>com.github.sgroschupf</groupId>  
+            <artifactId>zkclient</artifactId>  
+            <version>0.1</version>  
+        </dependency> 
+        
+        
+               <!-- 导入Mysql数据库链接jar包 -->  
+        <dependency>  
+            <groupId>mysql</groupId>  
+            <artifactId>mysql-connector-java</artifactId>  
+            <version>5.1.30</version>  
+        </dependency>  
+        <!-- 导入dbcp的jar包，用来在applicationContext.xml中配置数据库 -->  
+        <dependency>  
+            <groupId>commons-dbcp</groupId>  
+            <artifactId>commons-dbcp</artifactId>  
+            <version>1.2.2</version>  
+        </dependency>      
+        <!-- spring 对jpa的支持 -->
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-jpa</artifactId>
+            <version>${spring.data.jpa.version}</version>
+        </dependency>
+        <!-- SPRING END -->
+        <!-- hibernate start -->
+        <dependency>
+            <groupId>org.hibernate.javax.persistence</groupId>
+            <artifactId>hibernate-jpa-2.0-api</artifactId>
+            <version>${hibernate.jpa.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>${hibernate.core.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>${hibernate.core.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>${hibernate.validator.version}</version>
+        </dependency>
+        <!-- hibernate end -->
+      
+  </dependencies>
+  <build>
+    <finalName>springmvc</finalName>
+  </build>
+  <properties>
+  	<spring.version>4.3.7.RELEASE</spring.version>
+  	<hibernate.jpa.version>1.0.1.Final</hibernate.jpa.version>
+        <hibernate.core.version>3.5.5-Final</hibernate.core.version>
+        <hibernate.validator.version>4.3.1.Final</hibernate.validator.version>
+        <spring.data.jpa.version>1.4.3.RELEASE</spring.data.jpa.version>
+  </properties>
+      
+
+</project>
